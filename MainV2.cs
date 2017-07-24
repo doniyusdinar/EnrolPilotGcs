@@ -413,7 +413,6 @@ namespace MissionPlanner
         {
             MenuSimulation.Visible = DisplayConfiguration.displaySimulation;
             MenuTerminal.Visible = DisplayConfiguration.displayTerminal;
-            MenuHelp.Visible = DisplayConfiguration.displayHelp;
             MissionPlanner.Controls.BackstageView.BackstageView.Advanced = DisplayConfiguration.isAdvancedMode;
 
             if (MainV2.instance.FlightData != null)
@@ -898,7 +897,6 @@ namespace MissionPlanner
                 MenuFlightData.Visible = false;
                 MenuFlightPlanner.Visible = true;
                 MenuConfigTune.Visible = false;
-                MenuHelp.Visible = false;
                 MenuInitConfig.Visible = false;
                 MenuSimulation.Visible = false;
                 MenuTerminal.Visible = false;
@@ -1005,7 +1003,6 @@ namespace MissionPlanner
             MenuConfigTune.Image = displayicons.config_tuning;
             MenuTerminal.Image = displayicons.terminal;
             MenuConnect.Image = displayicons.connect;
-            MenuHelp.Image = displayicons.help;
             MenuDonate.Image = displayicons.donate;
 
 
@@ -1016,7 +1013,6 @@ namespace MissionPlanner
             MenuConfigTune.ForeColor = ThemeManager.TextColor;
             MenuTerminal.ForeColor = ThemeManager.TextColor;
             MenuConnect.ForeColor = ThemeManager.TextColor;
-            MenuHelp.ForeColor = ThemeManager.TextColor;
             MenuDonate.ForeColor = ThemeManager.TextColor;
         }
 
@@ -1027,7 +1023,6 @@ namespace MissionPlanner
                 MenuFlightData.Visible = true;
                 MenuFlightPlanner.Visible = true;
                 MenuConfigTune.Visible = true;
-                MenuHelp.Visible = true;
                 MenuInitConfig.Visible = true;
                 MenuSimulation.Visible = true;
                 MenuTerminal.Visible = true;
@@ -1039,7 +1034,6 @@ namespace MissionPlanner
                     MenuFlightData.Visible = true;
                     MenuFlightPlanner.Visible = true;
                     MenuConfigTune.Visible = true;
-                    MenuHelp.Visible = true;
                     MenuInitConfig.Visible = true;
                     MenuSimulation.Visible = true;
                     MenuTerminal.Visible = true;

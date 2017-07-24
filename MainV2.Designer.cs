@@ -46,7 +46,6 @@ namespace MissionPlanner
             this.MenuConfigTune = new System.Windows.Forms.ToolStripButton();
             this.MenuSimulation = new System.Windows.Forms.ToolStripButton();
             this.MenuTerminal = new System.Windows.Forms.ToolStripButton();
-            this.MenuHelp = new System.Windows.Forms.ToolStripButton();
             this.MenuDonate = new System.Windows.Forms.ToolStripButton();
             this.MenuConnect = new System.Windows.Forms.ToolStripButton();
             this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
@@ -71,7 +70,6 @@ namespace MissionPlanner
             this.MenuConfigTune,
             this.MenuSimulation,
             this.MenuTerminal,
-            this.MenuHelp,
             this.MenuDonate,
             this.MenuConnect,
             this.toolStripConnectionControl});
@@ -172,15 +170,6 @@ namespace MissionPlanner
             this.MenuTerminal.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.MenuTerminal.Click += new System.EventHandler(this.MenuTerminal_Click);
             // 
-            // MenuHelp
-            // 
-            resources.ApplyResources(this.MenuHelp, "MenuHelp");
-            this.MenuHelp.ForeColor = System.Drawing.Color.White;
-            this.MenuHelp.Margin = new System.Windows.Forms.Padding(0);
-            this.MenuHelp.Name = "MenuHelp";
-            this.MenuHelp.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.MenuHelp.Click += new System.EventHandler(this.MenuHelp_Click);
-            // 
             // MenuDonate
             // 
             resources.ApplyResources(this.MenuDonate, "MenuDonate");
@@ -255,17 +244,15 @@ namespace MissionPlanner
         public System.Windows.Forms.ToolStripButton MenuConfigTune;
         public System.Windows.Forms.ToolStripButton MenuTerminal;
         public System.Windows.Forms.ToolStripButton MenuConnect;
-
-        private System.Windows.Forms.ToolStripButton MenuHelp;
         private Controls.ToolStripConnectionControl toolStripConnectionControl;
         private Controls.MyButton menu;
         public System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ContextMenuStrip CTX_mainmenu;
         private System.Windows.Forms.ToolStripMenuItem autoHideToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton MenuDonate;
         public System.Windows.Forms.MenuStrip MainMenu;
         private System.Windows.Forms.ToolStripMenuItem fullScreenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem readonlyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem connectionOptionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton MenuDonate;
     }
 }
