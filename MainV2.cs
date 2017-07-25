@@ -888,11 +888,11 @@ namespace MissionPlanner
 
             if (Program.Logo != null && Program.name == "VVVVZ")
             {
-                MenuDonate.Click -= this.toolStripMenuItem1_Click;
-                MenuDonate.Text = "";
-                MenuDonate.Image = Program.Logo;
+                MenuCamera.Click -= this.toolStripMenuItem1_Click;
+                MenuCamera.Text = "";
+                MenuCamera.Image = Program.Logo;
 
-                MenuDonate.Click += MenuCustom_Click;
+                MenuCamera.Click += MenuCustom_Click;
 
                 MenuFlightData.Visible = false;
                 MenuFlightPlanner.Visible = true;
@@ -903,9 +903,9 @@ namespace MissionPlanner
             }
             else if (Program.Logo != null && Program.names.Contains(Program.name))
             {
-                MenuDonate.Click -= this.toolStripMenuItem1_Click;
-                MenuDonate.Text = "";
-                MenuDonate.Image = Program.Logo;
+                MenuCamera.Click -= this.toolStripMenuItem1_Click;
+                MenuCamera.Text = "";
+                MenuCamera.Image = Program.Logo;
             }
 
             Application.DoEvents();
@@ -1003,7 +1003,7 @@ namespace MissionPlanner
             MenuConfigTune.Image = displayicons.config_tuning;
             MenuTerminal.Image = displayicons.terminal;
             MenuConnect.Image = displayicons.connect;
-            MenuDonate.Image = displayicons.donate;
+            MenuCamera.Image = displayicons.donate;
 
 
             MenuFlightData.ForeColor = ThemeManager.TextColor;
@@ -1013,7 +1013,7 @@ namespace MissionPlanner
             MenuConfigTune.ForeColor = ThemeManager.TextColor;
             MenuTerminal.ForeColor = ThemeManager.TextColor;
             MenuConnect.ForeColor = ThemeManager.TextColor;
-            MenuDonate.ForeColor = ThemeManager.TextColor;
+            MenuCamera.ForeColor = ThemeManager.TextColor;
         }
 
         void MenuCustom_Click(object sender, EventArgs e)
@@ -1138,6 +1138,11 @@ namespace MissionPlanner
         private void MenuFlightPlanner_Click(object sender, EventArgs e)
         {
             MyView.ShowScreen("FlightPlanner");
+        }
+
+        private void MenuCamera_Click(object sender, EventArgs e)
+        {
+
         }
 
         public void MenuSetup_Click(object sender, EventArgs e)
