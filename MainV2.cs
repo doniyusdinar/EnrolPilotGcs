@@ -907,6 +907,7 @@ namespace MissionPlanner
                 MenuCamera.Text = "";
                 MenuCamera.Image = Program.Logo;
             }
+            EnterFullScreen();
 
             Application.DoEvents();
 
@@ -932,6 +933,13 @@ namespace MissionPlanner
             if (DoSnap(this.Top, scn.WorkingArea.Top)) this.Top = scn.WorkingArea.Top;
             if (DoSnap(scn.WorkingArea.Right, this.Right)) this.Left = scn.WorkingArea.Right - this.Width;
             if (DoSnap(scn.WorkingArea.Bottom, this.Bottom)) this.Top = scn.WorkingArea.Bottom - this.Height;
+        }
+
+        private void EnterFullScreen()
+        {
+            this.WindowState = FormWindowState.Normal;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         void cmb_sysid_Click(object sender, EventArgs e)
@@ -3688,5 +3696,6 @@ namespace MissionPlanner
         {
             new ConnectionOptions().Show(this);
         }
+
     }
 }
