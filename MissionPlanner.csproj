@@ -101,7 +101,7 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>mpdesktop.ico</ApplicationIcon>
+    <ApplicationIcon>EnrolPilotGcs_Desktop.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -450,6 +450,28 @@
     <Compile Include="Antenna\Tracker.Designer.cs">
       <DependentUpon>Tracker.cs</DependentUpon>
     </Compile>
+    <Compile Include="AvionicsInstrumentsControls\AirSpeedIndicatorInstrumentControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AvionicsInstrumentsControls\AltimeterInstrumentControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AvionicsInstrumentsControls\AttitudeIndicatorInstrumentControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AvionicsInstrumentsControls\AvionicsInstrumentsControlsRessources.Designer.cs" />
+    <Compile Include="AvionicsInstrumentsControls\HeadingIndicatorInstrumentControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AvionicsInstrumentsControls\InstrumentControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AvionicsInstrumentsControls\TurnCoordinatorInstrumentControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AvionicsInstrumentsControls\VerticalSpeedIndicatorInstrumentControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\ControlSensorsStatus.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -476,6 +498,12 @@
     </Compile>
     <Compile Include="GCSViews\ConfigurationView\ConfigGPSInject.Designer.cs">
       <DependentUpon>ConfigGPSInject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCSViews\FlightDataCustom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\FlightDataCustom.Designer.cs">
+      <DependentUpon>FlightDataCustom.cs</DependentUpon>
     </Compile>
     <Compile Include="Grid\Grid.cs" />
     <Compile Include="Grid\GridPlugin.cs" />
@@ -1224,6 +1252,7 @@
     <EmbeddedResource Include="Antenna\Tracker.pt.resx">
       <DependentUpon>Tracker.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AvionicsInstrumentsControls\AvionicsInstrumentsControlsRessources.resx" />
     <EmbeddedResource Include="ConnectionOptions.ar.resx">
       <DependentUpon>ConnectionOptions.cs</DependentUpon>
     </EmbeddedResource>
@@ -2590,6 +2619,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\FlightData.zh-TW.resx">
       <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\FlightDataCustom.resx">
+      <DependentUpon>FlightDataCustom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\FlightPlanner.ar.resx">
       <DependentUpon>FlightPlanner.cs</DependentUpon>
@@ -4373,6 +4405,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Parachute.png" />
+    <Content Include="EnrolPilotGcs_Desktop.ico" />
     <Content Include="LogAnalyzer\py2exe\DataflashLog.py" />
     <Content Include="LogAnalyzer\py2exe\example_output.xml" />
     <Content Include="LogAnalyzer\py2exe\LogAnalyzer.py" />
@@ -4418,6 +4451,41 @@
     <None Include="Resources\boat.png" />
     <None Include="Resources\sub.png" />
     <None Include="Resources\camera_edit_kecil.png" />
+    <None Include="Resources\splash_enrol.png" />
+    <None Include="Resources\splash_enrol2.png" />
+    <Content Include="Resources\AirSpeedIndicator_Background.bmp" />
+    <Content Include="Resources\AirSpeedNeedle.bmp" />
+    <Content Include="Resources\Altimeter_Background.bmp" />
+    <Content Include="Resources\Antenna Tracker-01.png" />
+    <Content Include="Resources\Bandeau_Dérouleur.bmp" />
+    <Content Include="Resources\BT-hc06.jpg" />
+    <Content Include="Resources\connect_old.png" />
+    <Content Include="Resources\disconnect_old.png" />
+    <Content Include="Resources\enrol_logo.ico" />
+    <Content Include="Resources\enrol_logo_blackbg.ico" />
+    <Content Include="Resources\flightdata_old.png" />
+    <Content Include="Resources\flightplanner_old.png" />
+    <Content Include="Resources\HeadingIndicator_Aircraft.bmp" />
+    <Content Include="Resources\HeadingIndicator_Background.bmp" />
+    <Content Include="Resources\HeadingWeel.bmp" />
+    <Content Include="Resources\Horizon_Background.bmp" />
+    <Content Include="Resources\Horizon_GroundSky.bmp" />
+    <Content Include="Resources\Indicator_Background.bmp" />
+    <Content Include="Resources\IRIS_FW_ICON.png" />
+    <Content Include="Resources\light_connect_icon_old.png" />
+    <Content Include="Resources\light_disconnect_icon_old.png" />
+    <Content Include="Resources\light_flightdata_icon_old.png" />
+    <Content Include="Resources\light_flightplan_icon_old.png" />
+    <Content Include="Resources\LongNeedleAltimeter.bmp" />
+    <Content Include="Resources\Maquette_Avion.bmp" />
+    <Content Include="Resources\pixhawk2cube.jpg" />
+    <Content Include="Resources\SmallNeedleAltimeter.bmp" />
+    <Content Include="Resources\TurnCoordinatorAircraft.bmp" />
+    <Content Include="Resources\TurnCoordinatorBall.bmp" />
+    <Content Include="Resources\TurnCoordinatorMarks.bmp" />
+    <Content Include="Resources\TurnCoordinator_Background.bmp" />
+    <Content Include="Resources\VerticalSpeedIndicator_Background.bmp" />
+    <Content Include="Resources\VerticalSpeedNeedle.bmp" />
     <Content Include="Scripts\example7.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
