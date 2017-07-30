@@ -393,6 +393,7 @@ namespace MissionPlanner
         /// ie configuration gets reloaded on every click
         /// </summary>
         public GCSViews.FlightData FlightData;
+        public GCSViews.FlightDataCustom FlightDataCustom;
 
         public GCSViews.FlightPlanner FlightPlanner;
         Controls.SITL Simulation;
@@ -694,6 +695,7 @@ namespace MissionPlanner
             {
                 log.Info("Create FD");
                 FlightData = new GCSViews.FlightData();
+                FlightDataCustom = new GCSViews.FlightDataCustom();
                 log.Info("Create FP");
                 FlightPlanner = new GCSViews.FlightPlanner();
                 //Configuration = new GCSViews.ConfigurationView.Setup();
@@ -908,6 +910,9 @@ namespace MissionPlanner
                 MenuCamera.Image = Program.Logo;
             }
             EnterFullScreen();
+            GCSViews.FlightDataCustom flightDataCustom = new GCSViews.FlightDataCustom();
+            var width = flightDataCustom.Size.Width;
+            var height = flightDataCustom.Size.Height;
 
             Application.DoEvents();
 
@@ -1156,7 +1161,7 @@ namespace MissionPlanner
 
         private void MenuFlightData_Click(object sender, EventArgs e)
         {
-            MyView.ShowScreen("FlightData");
+            MyView.ShowScreen("FlightDataCustom");
         }
 
         private void MenuFlightPlanner_Click(object sender, EventArgs e)
@@ -2684,6 +2689,7 @@ namespace MissionPlanner
             }
 
             MyView.AddScreen(new MainSwitcher.Screen("FlightData", FlightData, true));
+            MyView.AddScreen(new MainSwitcher.Screen("FlightDataCustom", FlightDataCustom, true));
             MyView.AddScreen(new MainSwitcher.Screen("FlightPlanner", FlightPlanner, true));
             MyView.AddScreen(new MainSwitcher.Screen("HWConfig", typeof(GCSViews.InitialSetup), false));
             MyView.AddScreen(new MainSwitcher.Screen("SWConfig", typeof(GCSViews.SoftwareConfig), false));
